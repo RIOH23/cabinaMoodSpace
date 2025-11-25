@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva tu Sesión | Mood-Space</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-link">← Volver al inicio</a>
+        <div class="logo">
+            <img src="logo1.1.jpg" alt="Mood-Space Logo" style="height: 50px;">
+        </div>
+        <div style="width: 100px;"></div>
+    </header>
+
+    <div class="container">
+        <div class="section-title">
+            <h1>Elige tu momento</h1>
+            <p>Selecciona el tiempo que necesitas para recargar energía.</p>
+        </div>
+
+        <div class="packages-grid">
+            <div class="package-card">
+                <div class="card-header" style="background: #8FC1E3;">
+                    <h2>Mood Express</h2>
+                    <div class="duration">5 <span>min</span></div>
+                    <p>Relajación rápida</p>
+                </div>
+                <div class="card-body">
+                    <p style="margin-bottom: 15px; font-style: italic; font-size: 0.9rem;">Ideal para bajar el estrés inmediato.</p>
+                    <ul class="features-list">
+                        <li>Iluminación LED relajante</li>
+                        <li>Aromaterapia básica</li>
+                        <li>Música ambiental suave</li>
+                        <li>Ventilación fresca</li>
+                    </ul>
+                    <a href="#" class="btn-select">Seleccionar</a>
+                </div>
+            </div>
+
+            <div class="package-card" style="transform: scale(1.02); border: 2px solid var(--primary-color);">
+                <div class="card-header">
+                    <h2>Mood Balance</h2>
+                    <div class="duration">10 <span>min</span></div>
+                    <p>Equilibrio total</p>
+                </div>
+                <div class="card-body">
+                    <p style="margin-bottom: 15px; font-style: italic; font-size: 0.9rem;">La opción más popular.</p>
+                    <ul class="features-list">
+                        <li>Aromaterapia Premium</li>
+                        <li>Sonido envolvente</li>
+                        <li>Masaje automático espalda</li>
+                        <li>Meditación guiada (2 min)</li>
+                    </ul>
+                    <a href="#" class="btn-select" style="background: var(--primary-color);">Seleccionar (Recomendado)</a>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="card-header" style="background: #5065A8;">
+                    <h2>Mood Deep Relax</h2>
+                    <div class="duration">15 <span>min</span></div>
+                    <p>Experiencia profunda</p>
+                </div>
+                <div class="card-body">
+                    <p style="margin-bottom: 15px; font-style: italic; font-size: 0.9rem;">Descanso mental profundo.</p>
+                    <ul class="features-list">
+                        <li>Aromaterapia Doble + Binaural</li>
+                        <li>Masaje completo + Calor</li>
+                        <li>Toallita refrescante al salir</li>
+                    </ul>
+                    <a href="#" class="btn-select">Seleccionar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="extras-section">
+            <h3 style="text-align: center; margin-bottom: 20px; color: var(--text-dark);">Completa tu experiencia</h3>
+            
+            <div style="text-align: center; margin-bottom: 30px;">
+                <img src="imagen1.jpg" alt="Kit Mood-Space" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); max-height: 250px;">
+                <p style="margin-top: 10px; font-style: italic; color: #666; font-size: 0.9rem;">Llévate la experiencia Mood-Space a tu casa.</p>
+            </div>
+
+            <div class="extras-grid">
+                <div class="extra-item">
+                    <h4>Té Relajante</h4>
+                    <p style="font-size: 0.8rem; color: #666;">Manzanilla o Lavanda</p>
+                    <button class="add-btn">Agregar</button>
+                </div>
+                <div class="extra-item">
+                    <h4>Vela Aromática</h4>
+                    <p style="font-size: 0.8rem; color: #666;">Para llevar a casa</p>
+                    <button class="add-btn">Agregar</button>
+                </div>
+                <div class="extra-item">
+                    <h4>Pelota Antiestrés</h4>
+                    <p style="font-size: 0.8rem; color: #666;">Alivio de tensión</p>
+                    <button class="add-btn">Agregar</button>
+                </div>
+                <div class="extra-item">
+                    <h4>Mascarilla Facial</h4>
+                    <p style="font-size: 0.8rem; color: #666;">Hidratación rápida</p>
+                    <button class="add-btn">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-reserva" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Confirmar Reserva</h2>
+            <p id="paquete-seleccionado" style="color: var(--primary-color); font-weight: 600; margin-bottom: 20px;">Paquete...</p>
+            
+            <form id="form-reserva">
+                <div class="form-group">
+                    <label>Nombre:</label>
+                    <input type="text" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo:</label>
+                    <input type="email" placeholder="ejemplo@correo.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Hora de llegada:</label>
+                    <input type="time" required>
+                </div>
+                <button type="button" id="btn-confirmar" class="btn-select" style="background: var(--accent-color); border: none; margin-top: 20px;">Confirmar Cita</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("modal-reserva");
+        const closeBtn = document.querySelector(".close-btn");
+        const packageNameText = document.getElementById("paquete-seleccionado");
+        const btnConfirmar = document.getElementById("btn-confirmar");
+        const inputNombre = document.querySelector('input[type="text"]');
+        const inputCorreo = document.querySelector('input[type="email"]');
+        const inputHora = document.querySelector('input[type="time"]');
+
+        document.querySelectorAll('.btn-select').forEach(button => {
+            if(button.id !== "btn-confirmar"){
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const card = e.target.closest('.package-card');
+                    const title = card.querySelector('h2').innerText;
+                    const duration = card.querySelector('.duration').innerText;
+                    packageNameText.innerText = `Reservando: ${title} (${duration})`;
+                    modal.style.display = "flex";
+                });
+            }
+        });
+
+        closeBtn.addEventListener('click', () => modal.style.display = "none");
+        window.addEventListener('click', (e) => {
+            if (e.target == modal) modal.style.display = "none";
+        });
+
+        btnConfirmar.addEventListener('click', () => {
+            if(inputNombre.value === "" || inputCorreo.value === "" || inputHora.value === "") {
+                alert("Por favor, llena todos los campos para continuar.");
+                return;
+            }
+            alert("¡Listo " + inputNombre.value + "! Tu espacio en Mood-Space ha sido reservado.\nTe enviamos la confirmación a: " + inputCorreo.value);
+            modal.style.display = "none";
+            inputNombre.value = ""; inputCorreo.value = ""; inputHora.value = "";
+        });
+
+        document.querySelectorAll('.add-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (btn.classList.contains('agregado')) {
+                    btn.innerText = "Agregar";
+                    btn.style.backgroundColor = "transparent";
+                    btn.style.color = "var(--primary-color)";
+                    btn.classList.remove('agregado');
+                } else {
+                    btn.innerText = "¡Agregado! (+)";
+                    btn.style.backgroundColor = "var(--accent-color)";
+                    btn.style.color = "white";
+                    btn.style.borderColor = "var(--accent-color)";
+                    btn.classList.add('agregado');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
